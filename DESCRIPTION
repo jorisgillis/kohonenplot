@@ -15,6 +15,7 @@ BugReports: https://github.com/jorisgillis/kohonenplot/issues
 Imports:
   dplyr (>= 0.3),
   ggplot2 (>= 0.9.3),
-  reshape2 (>= 1.4.1)
+  reshape2 (>= 1.4.1),
+  scales (>= 0.2.4)
 Suggests:
   kohonen (>= 2.0.0)

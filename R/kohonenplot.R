@@ -5,13 +5,14 @@
 #' @param scaled Scale the size of the groups to the range [-1, 1]; Default = TRUE
 #' 
 #' @examples
-#' heat.map(som(as.matrix(mtcars), somgrid(2, 2, topo = 'hexagonal'), alpha = c(0.05, 0.01), keep.data = TRUE, rlen = 1000, n.hood = 'circular'))
+#' heat-map(som(as.matrix(mtcars), somgrid(2, 2, topo = 'hexagonal'), alpha = c(0.05, 0.01), keep.data = TRUE, rlen = 1000, n.hood = 'circular'))
 #' @export
 heat_map <- function(som, scaled = T) {
   df <- som_to_dataframe(som, scaled)
   ggplot2::ggplot(df, aes(Group, Parameter, fill = Value)) + ggplot2::geom_raster() +
-    ggplot2::scale_fill_gradient2() + 
-    ggplot2::geom_text(data = dplyr::filter(df, Parameter == 'Size'), aes(Group, Parameter, label = round(Value, 2)))
+    ggplot2::scale_fill_gradient2(low = '#377eb8', high = '#e41a1c') + 
+    ggplot2::geom_text(data = dplyr::filter(df, Parameter == 'Size'), aes(Group, Parameter, label = round(Value, 2))) +
+    ggplot2::scale_x_continuous(breaks = pretty_breaks(n = 8))
 }
 
 

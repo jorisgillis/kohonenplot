@@ -4,14 +4,17 @@
 \alias{som_to_dataframe}
 \title{Convert a SOM to a data frame ready to be plotted}
 \usage{
-som_to_dataframe(som)
+som_to_dataframe(som, scaled = T)
 }
 \arguments{
 \item{som}{A kohonen Self-Organising Map}
+
+\item{scaled}{Scale the size of groups to the range [-1, 1]; Default = TRUE}
 }
 \description{
 Takes a SOM and create a data frame with a row for each tile in the SOM and
 a column for each column of the original matrix. The content of the data
-frame is equivalent to the codes matrix.
+frame is equivalent to the codes matrix. Then the data frame is molten to
+ease the plotting of the data frame
 }
 

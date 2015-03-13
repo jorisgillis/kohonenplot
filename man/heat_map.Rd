@@ -4,15 +4,17 @@
 \alias{heat_map}
 \title{Convert a SOM into a heat map}
 \usage{
-heat_map(som)
+heat_map(som, scaled = T)
 }
 \arguments{
 \item{som}{A kohonen Self-Organising Map}
+
+\item{scaled}{Scale the size of the groups to the range [-1, 1]; Default = TRUE}
 }
 \description{
 Convert a SOM into a heat map
 }
 \examples{
-heat.map(som(as.matrix(mtcars), somgrid(2, 2, topo = 'hexagonal'), alpha = c(0.05, 0.01), keep.data = TRUE, rlen = 1000, n.hood = 'circular'))
+heat-map(som(as.matrix(mtcars), somgrid(2, 2, topo = 'hexagonal'), alpha = c(0.05, 0.01), keep.data = TRUE, rlen = 1000, n.hood = 'circular'))
 }
 
