@@ -1,0 +1,17 @@
+Package: kohonenplot
+Type: Package
+Title: Functions to plot Kohonen Self-Organising Maps
+Version: 0.1
+Date: 2015-03-13
+Author: Joris Gillis
+Maintainer: Joris Gillis <joris.gillis@mobilevikings.com>
+Description: Self-Organising Maps (produced by the kohonen package) visualisation. 
+  This package provides a set of functions to visually display Self-Organising Maps (SOMs)
+  produced by the 'kohonen' package. 
+Depends: R (>= 3.1.0)
+License: GPL v2.0
+URL: https://github.com/jorisgillis/kohonenplot
+BugReports: https://github.com/jorisgillis/kohonenplot/issues
+Imports:
+  dplyr (>= 0.3),
+  ggplot2 (>= 0.9.3)
